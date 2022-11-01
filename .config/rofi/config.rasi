@@ -1,0 +1,88 @@
+configuration {
+    display-drun:       "Apps";
+    display-window:     "Window";
+    show-icons:		false;
+    icon-theme:		"Papirus-Dark";
+}
+* {	
+    	lines: 4;
+    	columns: 1;
+    	selected-normal-foreground: #A290F1;
+	normal-foreground: #A290F1;
+	alternate-normal-foreground: #A290F1; 
+
+	selected-normal-background: #00000000;
+	normal-background: #00000000;
+	alternate-normal-background: #00000000;
+			
+    	border-color: #7555FF;
+   	text-color: #A290F1;
+    	font: "terminus Re33 Bold 25";
+	opacity: 0.3;
+}
+ 
+#window {
+	background-color: #1B1F3B;
+    border: 4;
+    padding: 2.5%;
+    width: 30%;
+    height: 28%;
+}
+ 
+#mainbox {
+    background-color: #00000000;
+    children: [inputbar, listview];
+    spacing: 10px;
+    padding: 7px 0;
+    border: 0px;
+    border-color: @base0D;
+}
+ 
+#listview {
+    background-color: #00000000;
+    fixed-height: 0;
+    border: 0px;
+    spacing: 3px;
+    scrollbar: false;
+    padding: 0px 0% 0px;
+}
+ 
+#element {
+    background-color: #00000000;
+    border: 0;
+    border-radius: 0px;
+    border-color: #2aa198;
+    padding: 4 0 6 -25;
+}
+ 
+#element selected {
+    background-color: #002b3600;
+    border: 0px;
+} 
+ 
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    background-color: #00000000;
+}
+ 
+#case-indicator {
+    background-color: #00000000;
+    spacing:    0;
+}
+#entry {
+    background-color: #00000000;
+    spacing:    0;
+}
+#prompt {
+    background-color: #00000000;
+	foreground-color: #7555FF;
+    spacing:    0;
+}
+ 
+#textbox-prompt-colon {
+    background-color: #00000000;
+    expand:     false;
+    str:        " >";
+    margin:     0px 0.3em 0em 0em ;
+}
+
